@@ -1,4 +1,4 @@
-# Config Manager Library (`ttpryg/config-manager`)
+# Config Manager Library
 
 A lightweight, standalone PHP configuration management library featuring dot-notation syntax, ArrayAccess support, multi-file directory loading, and database persistence (PDO / Custom Drivers).
 

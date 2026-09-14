@@ -1,5 +1,5 @@
 {
-    "name": "ttpryg/config-manager",
+    "name": "ttpryg/config",
     "description": "A flexible, standalone PHP configuration management library with dot-notation support.",
     "type": "library",
     "license": "MIT",
