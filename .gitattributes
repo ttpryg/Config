@@ -1,0 +1,16 @@
+# Docker files
+Dockerfile export-ignore
+docker-compose.yml export-ignore
+
+# CI/CD files
+.github/ export-ignore
+
+# Development files
+.gitattributes export-ignore
+.gitignore export-ignore
+phpunit.xml export-ignore
+.phpunit.result.cache export-ignore
+
+# Documentation
+README.md export-ignore
+LICENSE export-ignore
