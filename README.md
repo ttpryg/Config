@@ -1,4 +1,4 @@
-# Config Manager Library (`thirdParty/config-manager`)
+# Config Manager Library (`ttpryg/config-manager`)
 
 A lightweight, standalone PHP configuration management library featuring dot-notation syntax, ArrayAccess support, multi-file directory loading, and database persistence (PDO / Custom Drivers).
 
@@ -12,7 +12,7 @@ A lightweight, standalone PHP configuration management library featuring dot-not
 ## Package Structure (Composerable)
 
 ```text
-thirdParty/config-manager/
+ttpryg/config-manager/
 ├── composer.json
 ├── README.md
 ├── src/
@@ -30,11 +30,11 @@ thirdParty/config-manager/
 ## How to Reuse in Another Repository
 
 1. **Option A: Copy Folder Directly**
-   Copy the `thirdParty/config-manager/` folder into your new project and add the PSR-4 namespace to your project's `composer.json`:
+   Copy the `ttpryg/config-manager/` folder into your new project and add the PSR-4 namespace to your project's `composer.json`:
    ```json
    "autoload": {
        "psr-4": {
-           "ThirdParty\\Config\\": "thirdParty/config-manager/src/"
+           "Ttpryg\\Config\\": "ttpryg/config-manager/src/"
        }
    }
    ```
@@ -43,18 +43,18 @@ thirdParty/config-manager/
    Add as a local path repository in another project's `composer.json`:
    ```json
    "repositories": [
-       {
-           "type": "path",
-           "url": "./thirdParty/config-manager"
-       }
-   ],
+        {
+            "type": "path",
+            "url": "./ttpryg/config-manager"
+        }
+    ],
    "require": {
        "ttpryg/config-manager": "*"
    }
    ```
 
 3. **Option C: Publish to Git / Packagist**
-   Push the `thirdParty/config-manager` directory to its own GitHub repository (e.g. `github.com/your-username/config-manager`) and require it via standard composer:
+   Push the `ttpryg/config-manager` directory to its own GitHub repository (e.g. `github.com/your-username/config-manager`) and require it via standard composer:
    ```bash
    composer require ttpryg/config-manager
    ```
@@ -62,9 +62,9 @@ thirdParty/config-manager/
 ## Quick Start Example
 
 ```php
-use ThirdParty\Config\ConfigManager;
-use ThirdParty\Config\ConfigRepository;
-use ThirdParty\Config\Drivers\PdoDatabaseDriver;
+use Ttpryg\Config\ConfigManager;
+use Ttpryg\Config\ConfigRepository;
+use Ttpryg\Config\Drivers\PdoDatabaseDriver;
 
 // Method 1: Create manually
 $config = new ConfigRepository([
