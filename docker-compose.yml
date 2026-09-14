@@ -1,0 +1,29 @@
+services:
+  app:
+    build:
+      context: .
+      args:
+        PHP_VERSION: '8.2'
+    container_name: config_app
+    working_dir: /var/www/html
+    volumes:
+      - .:/var/www/html
+    networks:
+      - config-network
+
+  test:
+    build:
+      context: .
+      args:
+        PHP_VERSION: '8.2'
+    container_name: config_test
+    working_dir: /var/www/html
+    volumes:
+      - .:/var/www/html
+    command: vendor/bin/phpunit
+    networks:
+      - config-network
+
+networks:
+  config-network:
+    driver: bridge
