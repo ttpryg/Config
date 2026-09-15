@@ -3,7 +3,7 @@ services:
     build:
       context: .
       args:
-        PHP_VERSION: '8.2'
+        PHP_VERSION: '8.1'
     container_name: config_app
     working_dir: /var/www/html
     volumes:
@@ -15,7 +15,7 @@ services:
     build:
       context: .
       args:
-        PHP_VERSION: '8.2'
+        PHP_VERSION: '8.1'
     container_name: config_test
     working_dir: /var/www/html
     volumes:
