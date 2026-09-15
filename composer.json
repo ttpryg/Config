@@ -6,7 +6,7 @@
     "keywords": ["config", "configuration", "dot-notation", "array-access"],
     "authors": [
         {
-            "name": "toto",
+            "name": "Toto",
             "email": "totoprayogo1916@gmail.com"
         }
     ],
@@ -14,7 +14,9 @@
         "php": "^8.1 || ^8.2 || ^8.3"
     },
     "require-dev": {
-        "phpunit/phpunit": "^10.0"
+        "phpunit/phpunit": "^10.0",
+        "rector/rector": "^2.6",
+        "laravel/pint": "^1.30"
     },
     "autoload": {
         "psr-4": {
@@ -31,6 +33,14 @@
         "issues": "https://github.com/ttpryg/config/issues"
     },
     "scripts": {
-        "test": "phpunit --colors=always --testdox"
+        "test": "phpunit --colors=always --testdox",
+        "fix:check": [
+            "rector process --dry-run",
+            "pint --test"
+        ],
+        "fix": [
+            "rector process",
+            "pint"
+        ]
     }
 }
