@@ -14,3 +14,5 @@ phpunit.xml export-ignore
 # Documentation
 README.md export-ignore
 LICENSE export-ignore
+
+rector.php export-ignore
