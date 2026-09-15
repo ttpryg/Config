@@ -3,6 +3,7 @@
     "description": "A flexible, standalone PHP configuration management library with dot-notation support.",
     "type": "library",
     "license": "MIT",
+    "keywords": ["config", "configuration", "dot-notation", "array-access"],
     "authors": [
         {
             "name": "toto",
@@ -24,6 +25,10 @@
         "psr-4": {
             "Ttpryg\\Config\\Test\\": "tests/"
         }
+    },
+    "support": {
+        "source": "https://github.com/ttpryg/config",
+        "issues": "https://github.com/ttpryg/config/issues"
     },
     "scripts": {
         "test": "phpunit --colors=always --testdox"

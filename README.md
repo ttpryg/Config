@@ -21,8 +21,7 @@ ttpryg/config/
 │   ├── ConfigManager.php
 │   └── Drivers/
 │       ├── DatabaseDriverInterface.php
-│       ├── PdoDatabaseDriver.php
-│       └── CallbackDatabaseDriver.php
+│       └── PdoDatabaseDriver.php
 └── tests/
     └── ConfigRepositoryTest.php
 ```
