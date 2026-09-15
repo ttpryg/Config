@@ -47,6 +47,7 @@ class ConfigRepository implements ArrayAccess, ConfigInterface
             if (! isset($array[$segment]) || ! is_array($array[$segment])) {
                 $array[$segment] = [];
             }
+
             $array = &$array[$segment];
         }
 
@@ -85,6 +86,7 @@ class ConfigRepository implements ArrayAccess, ConfigInterface
             if (! isset($array[$segment]) || ! is_array($array[$segment])) {
                 return;
             }
+
             $array = &$array[$segment];
         }
 
