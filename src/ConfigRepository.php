@@ -11,17 +11,9 @@ use Ttpryg\Config\Drivers\DatabaseDriverInterface;
 class ConfigRepository implements ArrayAccess, ConfigInterface
 {
     /**
-     * @var array<string, mixed>
-     */
-    protected array $items = [];
-
-    /**
      * @param  array<string, mixed>  $items
      */
-    public function __construct(array $items = [])
-    {
-        $this->items = $items;
-    }
+    public function __construct(protected array $items = []) {}
 
     public function get(string $key, mixed $default = null): mixed
     {
@@ -55,6 +47,7 @@ class ConfigRepository implements ArrayAccess, ConfigInterface
             if (! isset($array[$segment]) || ! is_array($array[$segment])) {
                 $array[$segment] = [];
             }
+
             $array = &$array[$segment];
         }
 
@@ -93,6 +86,7 @@ class ConfigRepository implements ArrayAccess, ConfigInterface
             if (! isset($array[$segment]) || ! is_array($array[$segment])) {
                 return;
             }
+
             $array = &$array[$segment];
         }
 
