@@ -12,7 +12,7 @@ A lightweight, standalone PHP configuration management library featuring dot-not
 ## Package Structure (Composerable)
 
 ```text
-ttpryg/config-manager/
+ttpryg/config/
 ├── composer.json
 ├── README.md
 ├── src/
@@ -30,11 +30,11 @@ ttpryg/config-manager/
 ## How to Reuse in Another Repository
 
 1. **Option A: Copy Folder Directly**
-   Copy the `ttpryg/config-manager/` folder into your new project and add the PSR-4 namespace to your project's `composer.json`:
+   Copy the `ttpryg/config/` folder into your new project and add the PSR-4 namespace to your project's `composer.json`:
    ```json
    "autoload": {
        "psr-4": {
-           "Ttpryg\\Config\\": "ttpryg/config-manager/src/"
+           "Ttpryg\\Config\\": "ttpryg/config/src/"
        }
    }
    ```
@@ -45,18 +45,18 @@ ttpryg/config-manager/
    "repositories": [
         {
             "type": "path",
-            "url": "./ttpryg/config-manager"
+            "url": "./ttpryg/config"
         }
     ],
    "require": {
-       "ttpryg/config-manager": "*"
+       "ttpryg/config": "*"
    }
    ```
 
 3. **Option C: Publish to Git / Packagist**
-   Push the `ttpryg/config-manager` directory to its own GitHub repository (e.g. `github.com/your-username/config-manager`) and require it via standard composer:
+   Push the `ttpryg/config` directory to its own GitHub repository (e.g. `github.com/your-username/config`) and require it via standard composer:
    ```bash
-   composer require ttpryg/config-manager
+   composer require ttpryg/config
    ```
 
 ## Quick Start Example
